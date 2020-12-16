@@ -1,0 +1,5 @@
+
+
+nvidia/dcgm-exporter:2.0.13-2.1.2-ubuntu20.04
+grafana/grafana:7.3.5
+docker.io/prom/prometheus:v2.3.1

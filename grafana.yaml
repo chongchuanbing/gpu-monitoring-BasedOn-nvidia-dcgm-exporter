@@ -1,0 +1,44 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: grafana
+  namespace: monitor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: grafana
+  template:
+    metadata:
+      labels:
+        k8s-app: grafana
+    spec:
+      containers:
+        - name: grafana
+          image: grafana/grafana:6.5.2
+          env:
+            - name: GF_SECURITY_ADMIN_PASSWORD
+              value: admin
+            - name: GF_SECURITY_ADMIN_USER
+              value: admin
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    k8s-app: grafana
+  name: grafana-service
+  namespace: monitor
+spec:
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 31111
+  selector:
+    k8s-app: grafana
+  type: NodePort
