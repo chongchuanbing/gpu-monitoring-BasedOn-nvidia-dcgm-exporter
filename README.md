@@ -29,9 +29,9 @@
 > grafana-dashboard/GPU Monitor-1608083950635.json or https://grafana.com/grafana/dashboards/13579
 
 * GPU Monitor
-    ![](img/1608084229979.jpg)
+    ![image](https://github.com/chongchuanbing/gpu-monitoring-BasedOn-nvidia-dcgm-exporter/blob/main/img/1608084229979.jpg)
 * NVIDIA DCGM Exporter Dashboard
-    ![](img/1608085615967.jpg)
+    ![image](https://github.com/chongchuanbing/gpu-monitoring-BasedOn-nvidia-dcgm-exporter/blob/main/img/1608085615967.jpg)
 
 #### Nvidia-dcgm-exporter Metircs
 ```
