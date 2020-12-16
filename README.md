@@ -27,6 +27,7 @@
 
 #### Grafana Dashboard
 > grafana-dashboard/GPU Monitor-1608083950635.json or https://grafana.com/grafana/dashboards/13579
+> grafana-dashboard/NVIDIA DCGM Exporter Dashboard-1608085420122.json or https://grafana.com/grafana/dashboards/13580
 
 * GPU Monitor
     
