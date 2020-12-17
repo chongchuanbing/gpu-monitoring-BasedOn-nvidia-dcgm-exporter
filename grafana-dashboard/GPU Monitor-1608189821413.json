@@ -38,7 +38,7 @@
       "type": "datasource",
       "id": "prometheus",
       "name": "Prometheus",
-      "version": "v2.3.1"
+      "version": "1.0.0"
     }
   ],
   "annotations": {
@@ -468,14 +468,16 @@
       },
       "yaxes": [
         {
-          "format": "short",
-          "label": "W",
+          "$$hashKey": "object:140",
+          "format": "watt",
+          "label": "",
           "logBase": 1,
           "max": null,
           "min": null,
           "show": true
         },
         {
+          "$$hashKey": "object:141",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -566,7 +568,8 @@
       },
       "yaxes": [
         {
-          "format": "degree",
+          "$$hashKey": "object:88",
+          "format": "celsius",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -574,6 +577,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:89",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -627,5 +631,5 @@
   "timezone": "",
   "title": "GPU Monitor",
   "uid": "iK50XTJMk",
-  "version": 2
+  "version": 4
 }
