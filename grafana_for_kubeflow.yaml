@@ -69,7 +69,6 @@ spec:
           volumeMounts:
             - name: storage
               mountPath: /var/lib/grafana/
-              subPath: ""
       containers:
         - name: grafana
           image: grafana/grafana:7.3.5
@@ -112,9 +111,8 @@ spec:
               mountPath: "/etc/grafana/grafana.ini"
               subPath: grafana.ini
               readOnly: true
-            - mountPath: /var/lib/grafana
-              subPath: grafana
-              name: storage
+            - name: storage
+              mountPath: /var/lib/grafana
       volumes:
         - name: grafana-configuration
           configMap:
