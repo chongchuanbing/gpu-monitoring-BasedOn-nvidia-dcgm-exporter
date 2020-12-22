@@ -274,7 +274,7 @@
         {
           "expr": "DCGM_FI_DEV_POWER_USAGE{kubernetes_node=~\"${instance}\", gpu=~\"${gpu}\"}",
           "interval": "",
-          "legendFormat": "GPU {{gpu}}",
+          "legendFormat": "GPU {{kubernetes_node}} - {{gpu}}",
           "refId": "A"
         }
       ],
