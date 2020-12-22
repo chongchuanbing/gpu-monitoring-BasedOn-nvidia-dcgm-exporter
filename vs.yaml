@@ -1,0 +1,27 @@
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: grafana-vs
+  namespace: monitor
+spec:
+  gateways:
+  - kubeflow/kubeflow-gateway
+  hosts:
+  - '*'
+  http:
+  - match:
+    - method:
+        exact: GET
+      uri:
+        prefix: /grafana
+      rewrite:
+        uri: /
+    route:
+    - destination:
+        host: grafana-service.monitor.svc.cluster.local
+        port:
+          number: 3000
+
+---
+

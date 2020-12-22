@@ -25,6 +25,19 @@
 
 ```admin / admin```
 
+#### User pv for grafana data
+> you must modify nfs config in file grafana.yaml
+
+#### Not for kubeflow
+> please notice grafana.yaml
+
+> you can visit http://{node address}:31111
+
+#### grafana for kubeflow
+> please notice grafana_for_kubeflow.yaml and vs.yaml
+
+> you can visit http://{node address}:31380/grafana
+
 #### Grafana Dashboard
 > grafana-dashboard/GPU Monitor-1608189821413.json or https://grafana.com/grafana/dashboards/13579
 > grafana-dashboard/NVIDIA DCGM Exporter Dashboard-1608085420122.json or https://grafana.com/grafana/dashboards/13580

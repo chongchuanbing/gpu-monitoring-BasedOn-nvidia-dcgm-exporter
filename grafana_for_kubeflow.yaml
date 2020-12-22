@@ -37,7 +37,9 @@ metadata:
     istio: grafana
 data:
   grafana.ini: |-
-    
+    [server]
+    root_url = %(protocol)s://%(domain)s:%(http_port)s/grafana/
+    serve_from_sub_path = true
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -100,7 +102,5 @@ spec:
   ports:
     - port: 3000
       targetPort: 3000
-      nodePort: 31111
   selector:
     k8s-app: grafana
-  type: NodePort
