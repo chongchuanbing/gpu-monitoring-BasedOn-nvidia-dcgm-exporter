@@ -56,6 +56,15 @@ spec:
       labels:
         k8s-app: grafana
     spec:
+      initContainers:
+        - name: init-chown-data
+          image: alpine:3.10
+          imagePullPolicy: IfNotPresent
+          command: ["chown", "-R", "472:472", "/var/lib/grafana/"]
+          volumeMounts:
+            - name: storage
+              mountPath: /var/lib/grafana/
+              subPath: ""
       containers:
         - name: grafana
           image: grafana/grafana:7.3.5
