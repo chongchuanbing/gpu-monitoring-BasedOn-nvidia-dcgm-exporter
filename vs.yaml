@@ -11,9 +11,7 @@ spec:
   - '*'
   http:
   - match:
-    - method:
-        exact: GET
-      uri:
+    - uri:
         prefix: /grafana
       rewrite:
         uri: /
@@ -35,9 +33,7 @@ spec:
 #    - '*'
 #  http:
 #    - match:
-#        - method:
-#            exact: GET
-#          uri:
+#        - uri:
 #            prefix: /prometheus
 #          rewrite:
 #            uri: /
