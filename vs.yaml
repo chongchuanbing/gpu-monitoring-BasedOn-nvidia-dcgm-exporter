@@ -22,6 +22,27 @@ spec:
         host: grafana-service.monitor.svc.cluster.local
         port:
           number: 3000
-
 ---
-
+#apiVersion: networking.istio.io/v1alpha3
+#kind: VirtualService
+#metadata:
+#  name: prometheus-vs
+#  namespace: monitor
+#spec:
+#  gateways:
+#    - kubeflow/kubeflow-gateway
+#  hosts:
+#    - '*'
+#  http:
+#    - match:
+#        - method:
+#            exact: GET
+#          uri:
+#            prefix: /prometheus
+#          rewrite:
+#            uri: /
+#      route:
+#        - destination:
+#            host: prometheus-service.monitor.svc.cluster.local
+#            port:
+#              number: 9090
